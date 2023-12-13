@@ -4,6 +4,7 @@ Build
 2. Add `kotlin.build.isObsoleteJdkOverrideEnabled=true` to local.properties file in /kotlin directory
 3. Apply patch:
 
+```
 diff --git a/compiler/frontend/src/org/jetbrains/kotlin/resolve/calls/smartcasts/DataFlowValueKindUtils.kt b/compiler/frontend/src/org/jetbrains/kotlin/resolve/calls/smartcasts/DataFlowValueKindUtils.kt
 index e1d895a7a7b..ff836f5d85c 100644
 --- a/compiler/frontend/src/org/jetbrains/kotlin/resolve/calls/smartcasts/DataFlowValueKindUtils.kt
@@ -54,6 +55,7 @@ index 25913f3bb48..5bd453a6b62 100644
 
  # Render internal diagostic names
  #kotlin.build.render.diagnostic.names=true
+```
 
  4. Build ./gradlew dist
  5. Create zip for dist/kotlinc and move archive to kotlin-relaxed repo /artifact direcotry
